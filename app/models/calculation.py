@@ -1,4 +1,3 @@
-import enum
 import uuid
 from datetime import datetime
 
@@ -6,13 +5,8 @@ from sqlalchemy import Column, DateTime, Enum, Float, String
 from sqlalchemy.dialects.postgresql import UUID
 
 from app.models.user import Base
+from app.enums import OperationType
 
-# Adds an extra touch of validation using an Enum to ensure that only valid operations are stored in the database.
-class OperationType(enum.Enum):
-    add = "add"
-    subtract = "subtract"
-    multiply = "multiply"
-    divide = "divide"
 
 class Calculation(Base):
     __tablename__ = "calculations"
