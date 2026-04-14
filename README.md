@@ -1,3 +1,43 @@
+# Module 11 — FastAPI Calculator
+
+A FastAPI application with a PostgreSQL backend, full test suite, and a CI/CD pipeline that builds, scans, and deploys a Docker image.
+
+**Docker Hub:** https://hub.docker.com/r/de269/module11
+
+---
+
+## Running the Tests
+
+Make sure you have a PostgreSQL instance running (see Docker setup below) and your virtual environment activated.
+
+```bash
+# Unit tests
+pytest tests/unit/
+
+# Integration tests
+pytest tests/integration/
+
+# End-to-end tests (requires the app to be running)
+pytest tests/e2e/
+
+# All tests with coverage
+pytest
+```
+
+The `DATABASE_URL` environment variable must be set for integration and e2e tests:
+
+```bash
+export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/fastapi_db
+```
+
+Or use Docker Compose to spin up the full stack:
+
+```bash
+docker compose up
+```
+
+---
+
 # 📦 Project Setup
 
 ---
