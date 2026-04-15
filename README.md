@@ -1,4 +1,4 @@
-# Module 11 — FastAPI Calculator
+# Module 11 — FastAPI Calculator 
 
 A FastAPI application with a PostgreSQL backend, full test suite, and a CI/CD pipeline that builds, scans, and deploys a Docker image.
 
